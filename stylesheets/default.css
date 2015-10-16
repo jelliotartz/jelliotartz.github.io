@@ -1,0 +1,92 @@
+
+/* SITE-WIDE FORMATTING */
+
+html {
+  background-color: #A0A7BD;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  margin: 8px;
+}
+
+/* COLORS */
+
+.bgc-bone {background-color: #DEDCD5;}
+
+/* FONT SIZE AND STYLES */
+
+.t-xs {font-size: 1em;}
+.t-s {font-size: 2em;}
+.t-std {font-size: 3em;}
+.t-lg {font-size: 4em;}
+.t-xl {font-size: 5em;}
+.t-xxl {font-size: 6em}
+
+.t-ac {text-align: center;}
+.t-aj {text-align: justify;}
+
+.f-bld {font-weight: 700;}
+
+.f-orb {font-family: 'Orbitron', sans-serif;}
+
+
+/* ELEMENT POSITIONING TOOLS */
+
+.p-std {padding: 0.5em;}
+.p-lg {padding: 1em;}
+
+
+.pos-abs {position: absolute;}
+.pos-fxd {position: fixed;}
+.pos-rel {position: relative;}
+.pos-sta {position: static;}
+
+.dsp-ibl {display: inline-block;}
+.dsp-bl {display: block;}
+
+.h-xs {height: 1em;}
+.h-sm {height: 2em;}
+.h-std {height: 3em;}
+.h-lg {height: 4em;}
+.h-xl {height: 5em;}
+.h-xxl {height: 6em;}
+.h-auto {height: auto;}
+
+.w-50 {width: 50%}
+
+.ctr-txt {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+/* INDEX: BLOG POST CONTAINER */
+
+.w-25 {width: 25%}
+.fl-l {float: left;}
+.cf {overflow: auto;}
+
+/* INDEX: ABOUT ME CONTAINER */
+
+.fl-r {float: right;}
+.r-0 {right: 0}
+.picture-padding {padding: 0.5em;}
+
+/* FOOTER */
+
+.ftr-pos {
+  bottom: 8px;
+  position: fixed;
+  width: 100%;
+
+}
+
+.debug {border: 1px solid red;}
+
+/* UNUSED TOOLS
+
+.f-lato {font-family: 'Lato', sans-serif;}
+.dsp-grd {display: flex;}
+*/
