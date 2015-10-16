@@ -1,5 +1,7 @@
 
-#### [Here's](http://www.jelliotartz.github.io/blog/site-index.html) the link to my live site!
+#### [Here's](jelliotartz.github.io/blog/site-index.html) the link to my live site!
+
+
 
 ##### What did you learn about CSS padding, borders, and margin by doing this challenge?
 
