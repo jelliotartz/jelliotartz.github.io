@@ -2,7 +2,6 @@
 #### [Here's](https://jelliotartz.github.io/blog/site-index.html) the link to my live site!
 
 
-
 ##### What did you learn about CSS padding, borders, and margin by doing this challenge?
 
 When thinking about the positioning of an element, *DO NOT* ignore these values! They are integral components when seeking to place an element on a page. I learned that although I got some good practice this week, I still have a lot to learn about proper and efficient positioning, and I don't really have a complete understanding of how to effectively and efficiently manipulate padding, borders, and margin.

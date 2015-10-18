@@ -12,6 +12,7 @@ html {
 
 .bgc-bone {background-color: #DEDCD5;}
 
+
 /* FONT SIZE AND STYLES */
 
 .t-xs {font-size: 1em;}
@@ -26,7 +27,8 @@ html {
 
 .f-bld {font-weight: 700;}
 
-.f-orb {font-family: 'Orbitron', sans-serif;}
+.l-tdn {text-decoration: none;}
+.fc-bl {color: black}
 
 
 /* ELEMENT POSITIONING TOOLS */
