@@ -5,6 +5,14 @@
 .fl-r {float: right;}
 .r-0 {right: 0}
 
+.blog-image {
+  height: 30em;
+  width: 40em;
+}
+
+.f-bld {font-weight: 700;}
+.l-tdn {text-decoration: none;}
+.fc-bl {color: black}
 
 
 /* UNUSED TOOLS
