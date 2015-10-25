@@ -10,6 +10,11 @@
   width: 40em;
 }
 
+.blog-image2 {
+  height: 50%;
+  width: 50%;
+}
+
 .f-bld {font-weight: 700;}
 .l-tdn {text-decoration: none;}
 .fc-bl {color: black}
