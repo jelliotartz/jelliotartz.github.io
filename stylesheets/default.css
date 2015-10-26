@@ -2,13 +2,15 @@
 /* SITE-WIDE FORMATTING */
 
 html {
-  background-color: #A0A7BD;
+  background-image:url("./../imgs/bgc_ideas/crumply_paper.jpg");
   display: inline-block;
   font-family: 'Lato', sans-serif;
-  margin: 8px;
+  /*margin: 8px;*/
 }
 
 /* COLORS */
+
+
 
 .bgc-bone {background-color: #DEDCD5;}
 
@@ -79,7 +81,7 @@ html {
 /* FOOTER */
 
 .ftr-pos {
-  bottom: 8px;
+  bottom: 0px;
   position: fixed;
   width: 100%;
 
@@ -92,4 +94,5 @@ html {
 
 .f-lato {font-family: 'Lato', sans-serif;}
 .dsp-grd {display: flex;}
+background-color: #A0A7BD; this is the purplish original page background color i had.
 */
