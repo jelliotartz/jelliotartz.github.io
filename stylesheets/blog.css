@@ -10,6 +10,11 @@
   width: 40em;
 }
 
+.blog-image-small {
+	height: 10em;
+	witdh: 20em;
+}
+
 .blog-image2 {
   height: 50%;
   width: 50%;
