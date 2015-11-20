@@ -149,6 +149,11 @@ p {
   width: 50%;
 }
 
+.blog-image3 {
+	height: auto;
+	width: 33%;
+}
+
 code {
 	background-color: #C9D4DA;
 	border-radius: 5px;
