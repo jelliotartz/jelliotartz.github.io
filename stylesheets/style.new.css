@@ -140,5 +140,20 @@ hr#five:before {
 }
 
 footer {
- font-size: 3.5em;
+ font-size: 1.66em;
 }
+
+.blog-links {
+	/*border: 1px solid red;     /*working border box */
+	font-size: 1.33em;
+	line-height: 1.4em;
+	margin-top: 20px;
+	text-decoration: none;
+	text-align: center;
+	width: 50%
+}
+
+.blog-links h3 span {
+	font-style: italic;
+}
+

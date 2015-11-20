@@ -3,60 +3,160 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <title>Blog Index</title>
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/normalize.old.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="./../stylesheets/cutegrids.css">
+  
+  <link rel="stylesheet" href="./../stylesheets/default.css">
+    
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
 </head>
 
-<header class="t-std bgc-bone ctr-txt bdr-blk">
-  <p>Tidbyts: my DBC blog</p>
-</header>
+
+
 
 <body>
 
-  <section class="pos-abs w-50 fl-l">
-    <p class="t-aj p-lg t-xs">
-      Welcome to my DBC blog! I'm currently going through the aches and pains of learning how to design and create my own website, as part of my Dev Bootcamp course work. At DBC I'll primarily be learning how to code with Ruby, and I'll use this site to keep you updated as I learn about the world of software development and work on projects. Thanks for stopping by!
-    </p>
+<div class="row">
+  
+  <div class="cute-8-laptop cute-2-laptop-offset left">
+    
+    <header class="row">
+      <h2 class="cute-6-laptop">
+        <a href="./blog-index.html">tid<span>byts</span></a>
+      </h2>
+      <h2 class="cute-6-laptop author">
+        writing by <a href="./../index.html"><span>James Artz</span></a>
+      </h2>
+    </header>
 
-    <p class="t-aj p-lg t-xs">
-      Here's a little background information about me: I spent the last ~10 years studying the archaeology and history of ancient Greece, while working on a Ph.D in Classical Archaeology at SUNY Buffalo. While working on my degree, I got involved in a project to digitize and annotate archaeological field notebooks, where I started playing around with coding and web development. After finishing my degree, I decided to switch fields and pursue a career in development!
-    </p>
-  </section>
+    <div class="blockquote">
+      <blockquote>
+        Musings on the aches and pains of learning software development.
+      </blockquote>
+      <blockquote>
+        Me code pretty someday.
+      </blockquote>
+    </div>
 
-  <section class="pos-abs w-50 fl-r r-0">
-    <div class="t-ac p-lg t-xs">
-      <a class="l-tdn fc-bl" href="./version-control.html">Some Thoughts on Version Control</a>
-    </div>
-    <div class="t-ac p-lg t-xs">
-      <a class="l-tdn fc-bl" href="./css-concepts.html">CSS Classes and IDs: Some Thoughts on Best Practices</a>
-    </div>
-    <div class="t-ac p-lg t-xs">
-      <a class="l-tdn fc-bl" href="./arrays-hashes.html">Ruby Arrays and Hashes</a>
-    </div>
-    <div class="t-ac p-lg t-xs">
-      <a class="l-tdn fc-bl" href="./enumerable-methods.html">The .group_by Method for Enumerables</a>
-    </div>
-    <div class="t-ac p-lg t-xs">
-      <a class="l-tdn fc-bl" href="./ruby-classes.html">Keepin' it Classy: Ruby Instance and Local Variables</a>
-    </div>
-    <div class="t-ac p-lg t-xs">
-      <a class="l-tdn fc-bl" href="./javascript.html">Ruby Hashes and JavaScript Objects</a>
-    </div>
-  </section>
+<!-- BEGINNING OF BLOG POSTS -->
 
-<footer class="bgc-bone t-ac h-lg ftr-pos ctr-txt p-std bdr-blk">
-  <div>
-   <a class="l-tdn fc-bl" href="https://www.facebook.com/jelliotartz">Facebook</a>
-   <a class="l-tdn fc-bl" href="https://twitter.com/jelliotartz">Twitter</a>
-   <a class="l-tdn fc-bl" href="https://www.linkedin.com/in/jelliotartz">LinkedIn</a>
-   <a class="l-tdn fc-bl" href="https://github.com/jelliotartz">GitHub</a>
+    <article>
+      <div class="date">
+        11.13.2015
+      </div>
+      <div class="title">
+        <h2><a href="./javascript.html">Ruby Hashes and JavaScript Objects</a></h2>
+      </div>
+      <div class="teaser">
+        Both Ruby and JavaScript allow data storage in the form of key/value pairs. How similar is the syntax of this concept in these two languages?
+      </div>
+      <div class="link">
+        <a href="./javascript.html">Read More</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="date">
+        11.6.2015
+      </div>
+      <div class="title">
+        <h2><a href="./ruby-classes.html">Stay Classy, Ruby</a></h2>
+      </div>
+      <div class="teaser">
+        Classes are an easy way to create large numbers of objects in ruby. Instead of defining separate methods...
+      </div>
+      <div class="link">
+        <a href="./ruby-classes.html">Read More</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="date">
+        10.30.2015
+      </div>
+      <div class="title">
+        <h2><a href="./enumerable-methods.html">The #group_by Method for Ruby Enumerables</a></h2>
+      </div>
+      <div class="teaser">
+        As its name suggests, the .group_by method is used to group a collection by the results of a block of code that is passed to the method...
+      </div>
+      <div class="link">
+        <a href="./enumerable-methods.html">Read More</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="date">
+        10.23.2015
+      </div>
+      <div class="title">
+        <h2><a href="./arrays-hashes.html">Ruby Arrays and Hashes</a></h2>
+      </div>
+      <div class="teaser">
+        Why would you use one instead of the other?
+      </div>
+      <div class="link">
+        <a href="./arrays-hashes.html">Read More</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="date">
+        10.16.2015
+      </div>
+      <div class="title">
+        <h2><a href="./css-concepts.html">CSS Classes and IDs: Some Reflections on Best Practices</a></h2>
+      </div>
+      <div class="teaser">
+        CSS classes and IDs are two types of selectors that are used to designate HTML elements to which properties and values are applied...
+      </div>
+      <div class="link">
+        <a href="./css-concepts.html">Read More</a>
+      </div>
+    </article>
+
+    <article>
+      <div class="date">
+        10.9.2015
+      </div>
+      <div class="title">
+        <h2><a href="./version-control.html">Some Thoughts on Version Control</a></h2>
+      </div>
+      <div class="teaser">
+        Version control is beneficial because projects are often being worked on by multiple developers, creating the risk of one developer overwriting the work of another, or data loss...
+      </div>
+      <div class="link">
+        <a href="./version-control.html">Read More</a>
+      </div>
+    </article>
+
   </div>
 
+</div>
+
+
+
+
+<footer class="link">
+ <ul>
+  <li><a href="http://facebook.com/jelliotartz"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="http://twitter.com/jelliotartz"><i class="fa fa-twitter"></i></a></li>
+  <li><a href="http://linkedin.com/in/jelliotartz"><i class="fa fa-linkedin"></i></a></li>
+  <li><a href="http://github.com/jelliotartz"><i class="fa fa-github"></i></a></li>
+ </ul>
+</footer>
+
+
 </body>
+
 
 </html>
 

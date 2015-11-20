@@ -3,105 +3,170 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <title>CSS Classes and IDs</title>
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/normalize.old.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:700,400' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="./../stylesheets/cutegrids.css">
+  
+  <link rel="stylesheet" href="./../stylesheets/default.css">
+    
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
 </head>
-
-
-
-<header class="t-std bgc-bone ctr-txt bdr-blk">
-  <p>Tidbyts: my DBC blog</p>
-</header>
-
 
 <body>
 
-<section class="f-bld t-ac">
-  <h1>CSS Classes and IDs</h1>
-  <h2>Some Thoughts on Best Practices</h2>
-</section>
+  <div class="row">
 
-<main role="main">
+    <div class="cute-8-laptop cute-2-laptop-offset left">
 
-<article class="body-padding">
+      <header class="row">
+        <h2 class="cute-6-laptop">
+          <a href="./blog-index.html">tid<span>byts</span></a>
+        </h2>
+        <h2 class="cute-6-laptop author">
+          writing by <a href="./../index.html"><span>James Artz</span></a>
+        </h2>
+      </header>
 
-  <p class="t-aj">
-    First, some basic definitions: classes and IDs are two types of selectors that are used to designate HTML elements to which properties and values are applied. The main difference between a class and an ID is that a class targets multiple elements, and an ID targets one element.
-  </p>
+      <section class="post_title">
+        <h2>CSS Classes and IDs: Some Reflections on Best Practices</h2>
+      </section>
 
-  <p class="t-aj">
-    Second, the methodology for applying class and ID selectors to HTML: I'll start with going through the class methodology, and then come back to ID. After the name of the element in an HTML tag, add class="text", with the name of the class substituted for "text". Here's an example of the HTML format, with []s substituted for <>s:
-  </p>
+      <div class="date">
+        10.16.2015
+      </div>
 
-  <p>
-    HTML: [p class="text"]Lorem Ipsum etc..[/p]
-  </p>
+      <br>
 
-  <p>
-    The Lorem Ipsum text will have the property/value attributes defined by the "text" class.
-  </p>
-  <p class="t-aj">
-    In your CSS stylesheet, classes are defined with a period, followed by the class name, then the property and value of the class in squiggly brackets, followed by a semicolon.
-  </p>
-    <p>CSS: .text {</p>
-    <p>property:value;</p>
-    <p>}</p>
+      <main role="main">
 
-  <p class="t-aj">
-    The method for defining and applying IDs is essentially the same as class, with ID replacing class in the HTML tag, and a hash (#) replacing the period in the CSS. An example is given below.
-  </p>
+      <p>
+        First, some basic definitions: classes and IDs are two types of selectors that are used to designate HTML elements to which properties and values are applied. The main difference between a class and an ID is that a class targets multiple elements, and an ID targets one element.
+      </p>
+      
+      <br>
+      
+      <p>
+        Second, the methodology for applying class and ID selectors to HTML: I'll start with going through the class methodology, and then come back to ID. After the name of the element in an HTML tag, add class="text", with the name of the class substituted for "text". Here's an example of the HTML syntax.
+      </p>
 
-  <p>
-    HTML: [p id="text"]Lorem Ipsum etc.[/p]
-  </p>
+      <br>
 
-    <p>CSS: #text {</p>
-    <p>property:value;</p>
-    <p>}</p>
+      <code>
+        HTML: < p class="text" > Lorem Ipsum etc.. < /p >
+      </code>
 
-  <p class="t-aj">
-    Below is a screen shot taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors">Mozilla's Developer Network's</a> Selector page, demonstrating the HTML and CSS class and ID methodology.
-  </p>
+      <br>
+      <br>
 
-  <img class="blog-image" src="../imgs/class-and-id.png">
+      <p>
+        The Lorem Ipsum text will have the property/value attributes defined by the "text" class.
+      </p>
 
-  <p class="t-aj">
-    Now that we've defined class and ID, and shown how to use them in HTML and CSS, let's talk about best practices. First, many CSS tutorials say that you should ideally use classes much more frequently than IDs, because classes can be applied to many elements and IDs to only one. This will save time and make your CSS stylesheets cleaner, more organized, and more succinct. Regarding class names, don't use Camel Case, and do use hyphens or underscores.
-  </p>
+      <br>
 
-  <p class="t-aj">
-    There are also some advanced CSS best-practice concepts that I'm mostly familiar with from tutorials and searching around on the web, and haven't (yet) had much experience with in practice. These include <span class="f-bld">CSS abstractions,</span> such as <a class="l-tdn" href="http://sass-lang.com/">SASS</a> and <a class="l-tdn" href="http://lesscss.org/">LESS</a>, and <span class="f-bld">design patterns,</span> such as <a class="l-tdn" href="http://acss.io/">Atomic</a>, <a class="l-tdn" href="http://oocss.org/">OOCSS (object-oriented CSS),</a> <a class="l-tdn" href="https://css-tricks.com/bem-101/">BEM (Block Element Modifier),</a> and <a class="l-tdn" href="https://smacss.com/">SMACSS</a>. CSS abstractions sound interesting to me, but my knowledge is pretty basic right now: It seems like they apply the "class" concept more broadly yet simply, creating a new stylesheet syntax that allows the author to define functions. I'm not sure exactly what this means right now, and I hope that as I get more familiar with Ruby and Rails, I can maybe get familar with CSS abstractions such as SASS or Compass.
-  </p>
+      <p>
+        In your CSS stylesheet, classes are defined with a period, followed by the class name, then the property and value of the class in squiggly brackets, followed by a semicolon.
+      </p>
 
-  <p class="t-aj">
-    I did play around with the <span class="f-bld">Atomic CSS</span> design pattern, but the results were not great for me. I see the value of the design pattern, which as I understand it can be loosely defined as follows: each class only has one property:value pair, you apply many classes to each element, and you follow a naming convention methodology to simplify your CSS classes. You end up with HTML elements with a ton of classes, but you have the benefit of easily replicating a particular property:value throughout a page or site. I like the idea, but I think that effectively applying this design pattern requires a familiarity and a certain amount of skill with CSS and website design in general that I am currently lacking. I'm still getting a handle on basic positioning of my infant website pages, and I think the "you gotta learn to crawl before you can walk" idiom is applicable here. Basic CSS is still a pretty painful process for me, and I don't think I'm ready to apply advanced organizational concepts like Atomic when I don't have a handle on the basics yet.
-  </p>
+      <br>
+        
+        <code>CSS: .text {</code>
+         <br>
+        <code>property:value;</code>
+         <br>
+        <code>}</code>
 
-  <p class="t-aj">
-    The other design patterns (OOCSS, BEM, SMACSS) remain little more to me than acronyms, at this point. I know that they apply to best-practice theory in CSS, more specifically to organizing and streamlining your CSS, but talking about them would open up way too many rabbit holes for this blog entry. So I'll leave you with just the links given above, and you can explore them if you like.
-  </p>
+        <br>
+        <br>
 
-  <p class="t-aj">
-    In sum, the little bit that I can say with any confidence regarding CSS best practice is as follows: classes are preferable over ids; there are a number of next-level organizational concepts that empower the designer to take class-based organization  to even higher places. Perhaps sometime down the line I'll make another post when I'm working towards those higher levels. But for now, I've got plenty of work to do on the ground floor.
-  </p>
+      <p>
+        The method for defining and applying IDs is essentially the same as class, with ID replacing class in the HTML tag, and a hash (#) replacing the period in the CSS. An example is given below.
+      </p>
 
-</article>
+      <br>
 
-</main>
+      <code>
+        HTML: [p id="text"]Lorem Ipsum etc.[/p]
+      </code>
 
-<footer class="bgc-bone t-ac h-lg ftr-pos ctr-txt p-std bdr-blk">
-  <div>
-   <a class="l-tdn fc-bl" href="https://www.facebook.com/jelliotartz">Facebook</a>
-   <a class="l-tdn fc-bl" href="https://twitter.com/jelliotartz">Twitter</a>
-   <a class="l-tdn fc-bl" href="https://www.linkedin.com/in/jelliotartz">LinkedIn</a>
-   <a class="l-tdn fc-bl" href="https://github.com/jelliotartz">GitHub</a>
+      <br>
+
+        <code>CSS: #text {</code>
+        <br>
+        <code>property:value;</code>
+        <br>
+        <code>}</code>
+        <br>
+        <br>
+
+        
+
+      <p class="link">
+        Below is a screen shot taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors">Mozilla's Developer Network's</a> Selector page, demonstrating the HTML and CSS class and ID methodology.
+      </p>
+
+      <br>
+
+      <img class="blog-image1" src="../imgs/class-and-id.png">
+
+      <br>
+      <br>
+
+      <p>
+        Now that we've defined class and ID, and shown how to use them in HTML and CSS, let's talk about best practices. First, many CSS tutorials say that you should ideally use classes much more frequently than IDs, because classes can be applied to many elements and IDs to only one. This will save time and make your CSS stylesheets cleaner, more organized, and more succinct. Regarding class names, don't use Camel Case, and do use hyphens or underscores.
+      </p>
+
+      <br>
+
+      <p class="link">
+        There are also some advanced CSS best-practice concepts that I'm mostly familiar with from tutorials and searching around on the web, and haven't (yet) had much experience with in practice. These include <span>CSS abstractions,</span> such as <a href="http://sass-lang.com/">SASS</a> and <a href="http://lesscss.org/">LESS</a>, and <span>design patterns,</span> such as <a href="http://acss.io/">Atomic</a>, <a href="http://oocss.org/">OOCSS (object-oriented CSS),</a> <a href="https://css-tricks.com/bem-101/">BEM (Block Element Modifier),</a> and <a href="https://smacss.com/">SMACSS</a>. CSS abstractions sound interesting to me, but my knowledge is pretty basic right now: It seems like they apply the "class" concept more broadly yet simply, creating a new stylesheet syntax that allows the author to define functions. I'm not sure exactly what this means right now, and I hope that as I get more familiar with Ruby and Rails, I can maybe get familar with CSS abstractions such as SASS or Compass.
+      </p>
+
+      <br>
+
+      <p>
+        I did play around with the <span>Atomic CSS</span> design pattern, but the results were not great for me. I see the value of the design pattern, which as I understand it can be loosely defined as follows: each class only has one property:value pair, you apply many classes to each element, and you follow a naming convention methodology to simplify your CSS classes. You end up with HTML elements with a ton of classes, but you have the benefit of easily replicating a particular property:value throughout a page or site. I like the idea, but I think that effectively applying this design pattern requires a familiarity and a certain amount of skill with CSS and website design in general that I am currently lacking. I'm still getting a handle on basic positioning of my infant website pages, and I think the "you gotta learn to crawl before you can walk" idiom is applicable here. Basic CSS is still a pretty painful process for me, and I don't think I'm ready to apply advanced organizational concepts like Atomic when I don't have a handle on the basics yet.
+      </p>
+
+      <br>
+
+      <p>
+        The other design patterns (OOCSS, BEM, SMACSS) remain little more to me than acronyms, at this point. I know that they apply to best-practice theory in CSS, more specifically to organizing and streamlining your CSS, but talking about them would open up way too many rabbit holes for this blog entry. So I'll leave you with just the links given above, and you can explore them if you like.
+      </p>
+
+      <br>
+
+      <p>
+        In sum, the little bit that I can say with any confidence regarding CSS best practice is as follows: classes are preferable over ids; there are a number of next-level organizational concepts that empower the designer to take class-based organization  to even higher places. Perhaps sometime down the line I'll make another post when I'm working towards those higher levels. But for now, I've got plenty of work to do on the ground floor.
+      </p>
+
+      </main>
+
+    </div>
+
   </div>
 
-</footer>
+  <br>
+  <br>
+
+
+
+  <footer class="link">
+   <ul>
+    <li><a href="http://facebook.com/jelliotartz"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="http://twitter.com/jelliotartz"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="http://linkedin.com/in/jelliotartz"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="http://github.com/jelliotartz"><i class="fa fa-github"></i></a></li>
+   </ul>
+  </footer>
+
 
 </body>
 

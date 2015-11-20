@@ -3,85 +3,108 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
-  <title>CSS Classes and IDs</title>
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/normalize.old.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:700,400' rel='stylesheet' type='text/css'>
+  <title>Ruby Arrays and Hashes</title>
+  
+  <link rel="stylesheet" href="./../stylesheets/cutegrids.css">
+  
+  <link rel="stylesheet" href="./../stylesheets/default.css">
+    
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
 </head>
 
-<header class="t-std bgc-bone ctr-txt bdr-blk">
-  <p>Tidbyts: my DBC blog</p>
-</header>
+<body>
 
-<section class="f-bld t-ac">
-  <h1>Arrays and Hashes</h1>
-  <h2>Why would you use one instead of the other?</h2>
-</section>
+  <div class="row">
 
-<main role="main">
+    <div class="cute-8-laptop cute-2-laptop-offset left">
 
-<article class="body-padding">
+      <header class="row">
+        <h2 class="cute-6-laptop">
+          <a href="./blog-index.html">tid<span>byts</span></a>
+        </h2>
+        <h2 class="cute-6-laptop author">
+          crafted by <a href="./../index.html"><span>James Artz</span></a>
+        </h2>
+      </header>
 
+      <section class="post_title">
+        <h2>Ruby Arrays and Hashes: Why Use One Instead of the Other?</h2>
+      </section>
 
-  <p class="t-aj">
-    An array is basically a list of elements stored in a container. Each element in the container acts like a variable, and you can inspect and change elements either individually or in groups. A hash is also a list of elements, but it differs from an array because each element in a hash must have what is called a key/value pair - i.e., each element, or key, has a value associated with it. The value can be a number, or a word or phrase (i.e., a string). Below is the basic syntax for creating an array in Ruby:
-  </p>
+      <div class="date">
+        10.23.2015
+      </div>
 
-  <code>
-    my_array = ["toys", "lamp", 2, "99 problems", "stacks on stacks on stacks"]
-  </code>
+      <br>
 
-  <!-- <img class="blog-image2" src="../imgs/demo_array.png"> -->
+      <main role="main">
 
-  <p class="t-aj">
-    And here is the basic syntax for creating a hash in Ruby:
-  </p>
+      <p>
+        An array is basically a list of elements stored in a container. Each element in the container acts like a variable, and you can inspect and change elements either individually or in groups. A hash is also a list of elements, but it differs from an array because each element in a hash must have what is called a key/value pair - i.e., each element, or key, has a value associated with it. The value can be a number, or a word or phrase (i.e., a string). Below is the basic syntax for creating an array in Ruby:
+      </p>
 
-  <code>
-    my_hash = { "sample_key" => "sample_value",
-    "address" => "1234 anytown USA",
-    "favorite candy" => "jelly-beans",
-    "number of cats" => 2
-    }
-  </code>
+      <br>
 
-  <!-- <img class="blog-image2" src="../imgs/demo_hash.png"> -->
+      <code>
+        my_array = ["toys", "lamp", 2, "99 problems", "stacks on stacks on stacks"]
+      </code>
 
-  <p class="t-aj">
-    At this point, I’m not confident that I fully understand when one would use an array versus a hash, but I can think of at least a few examples of when each would be appropriate: a hash seems like a useful concept for storing names and passwords; also, if a company wanted to create a profile for its users, it might use a hash for storing the data (think about an online registration form, with fields such as name, email, address, some basic yes/no preference choices, etc.). All this data could be stored as key/value pairs in a hash that is devoted to a specific user. An array, on the other hand, seems more suited to gathering and storing information when you know you want more than just a series of key/value pairs - i.e., when the expected response is more open-ended. I might hazard a guess that the app on my phone that lets me craft my grocery list is storing my input in an array. In the picture on their <a href = "https://itunes.apple.com/us/app/wegmans/id371707711?mt=8">itunes site</a>, you can see the list on the right screen - it allows you to search their database of products, and add what you want to your own list. I'm guessing when I select and store items from their database in my list, the app uses an array to accomplish that process. It's a super-handy app!
-  </p>
+      <br>
+      <br>
 
-  <p class="t-aj">
-    In sum, at this point it seems to me that a significant difference between a hash and an array is scope- the hash has limitless key/value pairs; but everything is designed around the idea of that pair. The array is simply a limitless list, but each element in the list is treated equally. I’m confident there is much more to learn about the differences between arrays and hashes, and why you’d choose one over the other, and I look forward to expanding on this post as my familiarity and experience with these powerful tools expands!
-  </p>
+      <p>
+        And here is the basic syntax for creating a hash in Ruby:
+      </p>
 
+      <br>
 
+      <code>my_hash = { "sample_key" => "sample_value",</code>
+      <br>
+      <code>"address" => "1234 anytown USA",</code>
+      <br>
+      <code>"favorite candy" => "jelly-beans",</code>
+      <br>
+      <code>"number of cats" => 2</code>
+      <br>
+      <code>}</code>
+      <br>
+      <br>
 
-</article>
+      <p class="link">
+        At this point, I’m not confident that I fully understand when one would use an array versus a hash, but I can think of at least a few examples of when each would be appropriate: a hash seems like a useful concept for storing names and passwords; also, if a company wanted to create a profile for its users, it might use a hash for storing the data (think about an online registration form, with fields such as name, email, address, some basic yes/no preference choices, etc.). All this data could be stored as key/value pairs in a hash that is devoted to a specific user. An array, on the other hand, seems more suited to gathering and storing information when you know you want more than just a series of key/value pairs - i.e., when the expected response is more open-ended. I might hazard a guess that the app on my phone that lets me craft my grocery list is storing my input in an array. In the picture on their <a href = "https://itunes.apple.com/us/app/wegmans/id371707711?mt=8">itunes site</a>, you can see the list on the right screen - it allows you to search their database of products, and add what you want to your own list. I'm guessing when I select and store items from their database in my list, the app uses an array to accomplish that process. It's a super-handy app!
+      </p>
 
-</main>
+      <br>
 
+      <p>
+        In sum, at this point it seems to me that a significant difference between a hash and an array is scope- the hash has limitless key/value pairs; but everything is designed around the idea of that pair. The array is simply a limitless list, but each element in the list is treated equally. I’m confident there is much more to learn about the differences between arrays and hashes, and why you’d choose one over the other, and I look forward to expanding on this post as my familiarity and experience with these powerful tools expands!
+      </p>
 
+      </main>
 
+    </div>
 
-
-
-
-
-
-
-
-<footer class="bgc-bone t-ac h-lg ftr-pos ctr-txt p-std bdr-blk">
-  <div>
-   <a class="l-tdn fc-bl" href="https://www.facebook.com/jelliotartz">Facebook</a>
-   <a class="l-tdn fc-bl" href="https://twitter.com/jelliotartz">Twitter</a>
-   <a class="l-tdn fc-bl" href="https://www.linkedin.com/in/jelliotartz">LinkedIn</a>
-   <a class="l-tdn fc-bl" href="https://github.com/jelliotartz">GitHub</a>
   </div>
 
-</footer>
+  <br>
+  <br>
+
+  <footer class="link">
+   <ul>
+    <li><a href="http://facebook.com/jelliotartz"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="http://twitter.com/jelliotartz"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="http://linkedin.com/in/jelliotartz"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="http://github.com/jelliotartz"><i class="fa fa-github"></i></a></li>
+   </ul>
+  </footer>
+
 
 </body>
 

@@ -1,98 +1,166 @@
 
-/* SITE-WIDE FORMATTING */
-
-html {
-  background-image:url("./../imgs/bgc_ideas/crumply_paper.jpg");
-  display: inline-block;
-  font-family: 'Lato', sans-serif;
-  /*margin: 8px;*/
+body {
+  	font-family: 'Roboto', sans-serif;
 }
 
-/* COLORS */
 
 
 
-.bgc-bone {background-color: #DEDCD5;}
 
+/* HEADER SECTION */
 
-/* FONT SIZE AND STYLES */
-
-.t-xs {font-size: 1em;}
-.t-s {font-size: 2em;}
-.t-std {font-size: 3em;}
-.t-lg {font-size: 4em;}
-.t-xl {font-size: 5em;}
-.t-xxl {font-size: 6em}
-
-.t-ac {text-align: center;}
-.t-aj {text-align: justify;}
-
-.f-bld {font-weight: 700;}
-
-.l-tdn {text-decoration: none;}
-.fc-bl {color: black}
-
-
-/* ELEMENT POSITIONING TOOLS */
-
-.p-std {padding: 0.5em;}
-.p-lg {padding: 1em;}
-
-
-.pos-abs {position: absolute;}
-.pos-fxd {position: fixed;}
-.pos-rel {position: relative;}
-.pos-sta {position: static;}
-
-.dsp-ibl {display: inline-block;}
-.dsp-bl {display: block;}
-
-.h-xs {height: 1em;}
-.h-sm {height: 2em;}
-.h-std {height: 3em;}
-.h-lg {height: 4em;}
-.h-xl {height: 5em;}
-.h-xxl {height: 6em;}
-.h-auto {height: auto;}
-
-.w-50 {width: 50%}
-
-.ctr-txt {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+header h2 a {
+	color: #222;
+	text-decoration: none;
+	font-size: 2em;
 }
 
-/* INDEX: BLOG POST CONTAINER */
-
-.w-25 {width: 25%}
-.fl-l {float: left;}
-.cf {overflow: auto;}
-
-/* INDEX: ABOUT ME CONTAINER */
-
-.fl-r {float: right;}
-.r-0 {right: 0}
-.picture-padding {padding: 0.5em;}
-
-/* FOOTER */
-
-.ftr-pos {
-  bottom: 0px;
-  position: fixed;
-  width: 100%;
-
+header h2 a span {
+	color: #607D8C;
 }
 
-.debug {border: 1px solid red;}
-.bdr-blk {border: 0.1em solid black;}
 
-/* UNUSED TOOLS
+.author {
+	font-size: 1em;
+	padding-top: 1.75em; /* this is a bad hack-fix to quasi-align my name with the bottom of tidbyts */
+	margin: 0 0 -2em 0;
+	text-align: right;
+}
 
-.f-lato {font-family: 'Lato', sans-serif;}
-.dsp-grd {display: flex;}
-background-color: #A0A7BD; this is the purplish original page background color i had.
+/* HEADER SECTION */
+
+/* 
+
+moving on: i'm not really satisfied with the font size and text
+placement of this header section. i'd like to have the 'by' be a bit
+larger- and accomplishing this is difficult, which leads me to think
+that my css for this section is kinda over-complicated. 
+
 */
+
+/* BLOCKQUOTE SECTION */
+
+.blockquote {
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1.5em;
+	margin: 3em 0 3em -2em;
+	padding: 0 0 0 2em;
+	color: #607D8C;
+	border-left: 3px solid #607D8C;
+}
+
+/* BLOCKQUOTE SECTION */
+
+
+/* BLOG LINK SECTION */
+
+
+.date {
+	margin-bottom: 1em;
+	color: #818181;
+}
+
+.title {
+	margin-bottom: 1em;
+}
+
+article h2 a {
+	text-decoration: none;
+	color: #222;
+	-webkit-transition: color 300ms ease;
+ 	transition: color 300ms ease;
+}
+
+article h2 a:visited {
+	text-decoration: none;
+	-webkit-transition: color 300ms ease;
+ 	transition: color 300ms ease;
+}
+
+article h2 a:hover {
+	color: #607D8C;
+}
+
+.teaser {
+	margin-bottom: .25em;
+}
+
+.link {
+	margin-bottom: 2em;
+
+}
+
+.link a {
+	/*text-decoration: none;*/
+	color: #222;
+	-webkit-transition: color 300ms ease;
+ 	transition: color 300ms ease;
+}
+
+.link a:visited {
+	text-decoration: none;
+	-webkit-transition: color 300ms ease;
+ 	transition: color 300ms ease;
+}
+
+.link a:hover {
+	color: #607D8C;
+}
+
+/* BLOG LINK SECTION */
+
+
+footer {
+	font-size: 3.5em;
+	text-align: center;
+}
+
+footer li {
+	display: inline-block;
+	list-style: none;
+}
+
+footer li ul a {
+	text-decoration: none;
+	color: #222;
+}
+
+
+/* BLOG POST FORMATTING */
+
+.post_title {
+	margin: 3em 0 3em 0;
+}
+
+
+p {
+  	line-height: 1.3em;
+  	text-align: justify;
+}
+
+.blog-image1 {
+	height: auto;
+	width: 100%;
+}
+
+.blog-image2 {
+  height: 50%;
+  width: 50%;
+}
+
+code {
+	background-color: #C9D4DA;
+	border-radius: 5px;
+}
+
+.sub-headings {
+	font-weight: 700;
+}
+
+p span {
+	font-weight: 700;	
+}
+
+
+

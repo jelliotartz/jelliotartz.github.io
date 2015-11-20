@@ -3,87 +3,126 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <title>#group_by</title>
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/normalize.old.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="./../stylesheets/blog.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:700,400' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="./../stylesheets/cutegrids.css">
+  
+  <link rel="stylesheet" href="./../stylesheets/default.css">
+    
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
 </head>
 
-<header class="t-std bgc-bone ctr-txt bdr-blk">
-  <p>Tidbyts: my DBC blog</p>
-</header>
+<body>
 
-<section class="f-bld t-ac">
-  <h1>Enumerable Methods</h1>
-  <h2>#group_by</h2>
-</section>
+  <div class="row">
 
-<main role="main">
+    <div class="cute-8-laptop cute-2-laptop-offset left">
 
-<article class="body-padding">
+      <header class="row">
+        <h2 class="cute-6-laptop">
+          <a href="./blog-index.html">tid<span>byts</span></a>
+        </h2>
+        <h2 class="cute-6-laptop author">
+          writing by <a href="./../index.html"><span>James Artz</span></a>
+        </h2>
+      </header>
 
+      <section class="post_title">
+        <h2>The #group_by Method for Ruby Enumerables</h2>
+      </section>
 
-  <p class="t-aj">
-    As its name suggests, the .group_by method is used to group a collection by the results of a block of code that is passed to the method. The method returns a hash, where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key. Here's the example given in ruby docs, where the block evaluates the integers in the range 1..6, and sorts the results based on performing modulo 3 on each integer in the range: key 0 is given values of 3 and 6, because these two integers return 0 for modulo 3; key 1 gets 1 and 4, and 2 gets 2 and 5.
-  </p>
+      <div class="date">
+        10.30.2015
+      </div>
 
-  <code>
-    (1..6).group_by { |i| i%3 }   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}
-  </code>
+      <br>
 
-  <p class="t-aj">
-    The .group_by method can also utilize a ternary in the block of code, giving more options for how to sort the results of the block. The string on the left side of the colon is the hash that evaluates to true, and the string on the right evaluates to false. In the array below, the array elements that evaluate to true (i.e., true for the method item.even?) will go into a hash with a key title "even". False will go in the "odd" hash. Note the question mark to the left of "even", denoting the use of the ternary.
-  </p>
- <code>
-    integers = [1, 2, 5, 7, 3, 6, 10, 25, 48, 99, 32]
-  </code>
-  <p></p>
-  <code>
-    integers.group_by {|item| item.even? ? "even" : "odd" }
-  </code>
-  <p></p>
-  <code>
-    {"odd"=>[1, 5, 7, 3, 25, 99], "even"=>[2, 6, 10, 48, 32]}
- </code>
- <p class="t-aj">
-    You can also use .group_by with strings, to search for whether an array of strings contains a certain word or character. Again, the ternary can be utilized if desired.
-  </p>
+      <main role="main">
 
-  <code>
-    strings = ["this", "is", "a", "string", "of", "words"]
-  </code>
-  <p></p>
-  <code>
-    strings.group_by { |word| word.include?("of") }
-  </code>
-  <p></p>
-  <code>
-    {false=>["this", "is", "a", "string", "words"], true=>["of"]}
-  </code>
-  <code>
-    strings.group_by { |word| word.include?("o")  ? "includes the letter o" : "does not include letter o" }
-  </code>
-  <p></p>
-  <code>
-    {"does not include letter o"=>["this", "is", "a", "string"], "includes the letter o"=>["of", "words"]}
-  </code>
+      <p>
+        As its name suggests, the .group_by method is used to group a collection by the results of a block of code that is passed to the method. The method returns a hash, where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key. Here's the example given in ruby docs, where the block evaluates the integers in the range 1..6, and sorts the results based on performing modulo 3 on each integer in the range: key 0 is given values of 3 and 6, because these two integers return 0 for modulo 3; key 1 gets 1 and 4, and 2 gets 2 and 5.
+      </p>
 
-  </article>
+      <br>
+      <br>
 
-  </main>
+      <code>
+        (1..6).group_by { |i| i%3 }   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}
+      </code>
 
+      <br>
+      <br>
 
-  <footer class="bgc-bone t-ac h-lg ftr-pos ctr-txt p-std bdr-blk">
-    <div>
-     <a class="l-tdn fc-bl" href="https://www.facebook.com/jelliotartz">Facebook</a>
-     <a class="l-tdn fc-bl" href="https://twitter.com/jelliotartz">Twitter</a>
-     <a class="l-tdn fc-bl" href="https://www.linkedin.com/in/jelliotartz">LinkedIn</a>
-     <a class="l-tdn fc-bl" href="https://github.com/jelliotartz">GitHub</a>
+      <p>
+        The .group_by method can also utilize a ternary in the block of code, giving more options for how to sort the results of the block. The string on the left side of the colon is the hash that evaluates to true, and the string on the right evaluates to false. In the array below, the array elements that evaluate to true (i.e., true for the method item.even?) will go into a hash with a key title "even". False will go in the "odd" hash. Note the question mark to the left of "even", denoting the use of the ternary.
+      </p>
+
+      <br>
+      <br>
+
+      <code>
+        integers = [1, 2, 5, 7, 3, 6, 10, 25, 48, 99, 32]
+      </code>
+      <br>
+      <code>
+        integers.group_by {|item| item.even? ? "even" : "odd" }
+      </code>
+      <br>
+      <code>
+        {"odd"=>[1, 5, 7, 3, 25, 99], "even"=>[2, 6, 10, 48, 32]}
+      </code>
+      <br>
+      <br>
+      <p>
+        You can also use .group_by with strings, to search for whether an array of strings contains a certain word or character. Again, the ternary can be utilized if desired.
+      </p>
+
+      <br>
+      <br>
+
+      <code>
+        strings = ["this", "is", "a", "string", "of", "words"]
+      </code>
+      <br>
+      <code>
+        strings.group_by { |word| word.include?("of") }
+      </code>
+      <br>
+      <code>
+        {false=>["this", "is", "a", "string", "words"], true=>["of"]}
+      </code>
+      <code>
+        strings.group_by { |word| word.include?("o")  ? "includes the letter o" : "does not include letter o" }
+      </code>
+      <br>
+      <code>
+        {"does not include letter o"=>["this", "is", "a", "string"], "includes the letter o"=>["of", "words"]}
+      </code>
+
+      </main>
+
+      <br>
+      <br>
+
+      <footer class="link">
+       <ul>
+        <li><a href="http://facebook.com/jelliotartz"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="http://twitter.com/jelliotartz"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="http://linkedin.com/in/jelliotartz"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="http://github.com/jelliotartz"><i class="fa fa-github"></i></a></li>
+       </ul>
+      </footer>
+
     </div>
 
-  </footer>
+  </div>
 
 </body>
 
