@@ -60,7 +60,7 @@
       <br>
 
       <p>
-        Confused? Let's design a fun little program that will tell you your sign, and at the same time demonstrate ruby classes, and instance versus local variables. The part of the code from <code> puts "--- Hmm... let me guess your sign. ----" 10.times do ... end</code> is just a little fun trick that I picked up from an exercise on accessing attributes, which makes it take a little time before the program outputs the result. In effect, it looks like the computer is ‘thinking hard’ to guess your sign.
+        Confused? Let's design a fun little program that will tell you your sign, and at the same time demonstrate ruby classes, and instance versus local variables. The part of the code from <span class="inline_code"> puts "--- Hmm... let me guess your sign. ----" 10.times do ... end</span> is just a little fun trick that I picked up from an exercise on accessing attributes, which makes it take a little time before the program outputs the result. In effect, it looks like the computer is ‘thinking hard’ to guess your sign.
       </p>
 
       <br>
@@ -84,13 +84,13 @@
       <br>
 
       <p>
-        And when we type the literal interpolation <code>#{@yoursign.my_sign}</code>, we are effectively saying to the computer “thanks to the SignReader#initialize method, you know that the local variable sign is defined in the instance method my_sign - defined in a totally different class - and you can access this even though it’s in a different class, because @yoursign can be called, read, and accessed anywhere within the SignReader class.”
+        And when we type the literal interpolation <span class="inline_code">#{@yoursign.my_sign}</span>, we are effectively saying to the computer “thanks to the SignReader#initialize method, you know that the local variable sign is defined in the instance method my_sign - defined in a totally different class - and you can access this even though it’s in a different class, because @yoursign can be called, read, and accessed anywhere within the SignReader class.”
       </p>
 
       <br>
 
       <p>
-        When we create a local variable called clairvoyant_computer, outside both of these classes, that is set to a new instance of the class SignReader, we can behold all the power and magic of instance variables and methods, as we reach all the way into ZodiacSign to get some info. There’s no mention of ZodiacSign, my_sign, or Virgo in the driver code that runs the program (<code>clairvoyant_computer.sign_guess</code>), but the computer is able to "know my sign," regardless. That's the magic of ruby classes and instance variables!
+        When we create a local variable called clairvoyant_computer, outside both of these classes, that is set to a new instance of the class SignReader, we can behold all the power and magic of instance variables and methods, as we reach all the way into ZodiacSign to get some info. There’s no mention of ZodiacSign, my_sign, or Virgo in the driver code that runs the program (<span class="inline_code">clairvoyant_computer.sign_guess</span>), but the computer is able to "know my sign," regardless. That's the magic of ruby classes and instance variables!
       </p>
 
       <br>
