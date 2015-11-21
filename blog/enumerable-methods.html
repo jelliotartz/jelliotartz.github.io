@@ -52,10 +52,10 @@
 
       <br>
       <br>
-
+      <pre>
       <code>
-        (1..6).group_by { |i| i%3 }   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}
-      </code>
+    (1..6).group_by { |i| i%3 }   #=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}</code>
+      </pre>
 
       <br>
       <br>
@@ -65,19 +65,13 @@
       </p>
 
       <br>
-      <br>
 
+      <pre>
       <code>
-        integers = [1, 2, 5, 7, 3, 6, 10, 25, 48, 99, 32]
-      </code>
-      <br>
-      <code>
-        integers.group_by {|item| item.even? ? "even" : "odd" }
-      </code>
-      <br>
-      <code>
-        {"odd"=>[1, 5, 7, 3, 25, 99], "even"=>[2, 6, 10, 48, 32]}
-      </code>
+  integers = [1, 2, 5, 7, 3, 6, 10, 25, 48, 99, 32]
+  integers.group_by {|item| item.even? ? "even" : "odd" }
+  {"odd"=>[1, 5, 7, 3, 25, 99], "even"=>[2, 6, 10, 48, 32]}</code>
+      </pre>
       <br>
       <br>
       <p>
@@ -85,26 +79,15 @@
       </p>
 
       <br>
-      <br>
 
+      <pre>
       <code>
-        strings = ["this", "is", "a", "string", "of", "words"]
-      </code>
-      <br>
-      <code>
-        strings.group_by { |word| word.include?("of") }
-      </code>
-      <br>
-      <code>
-        {false=>["this", "is", "a", "string", "words"], true=>["of"]}
-      </code>
-      <code>
-        strings.group_by { |word| word.include?("o")  ? "includes the letter o" : "does not include letter o" }
-      </code>
-      <br>
-      <code>
-        {"does not include letter o"=>["this", "is", "a", "string"], "includes the letter o"=>["of", "words"]}
-      </code>
+  strings = ["this", "is", "a", "string", "of", "words"]
+  strings.group_by { |word| word.include?("of") }
+  {false=>["this", "is", "a", "string", "words"], true=>["of"]}
+  strings.group_by { |word| word.include?("o")  ? "includes the letter o" : "does not include letter o" }
+  {"does not include letter o"=>["this", "is", "a", "string"], "includes the letter o"=>["of", "words"]}</code>
+      </pre>
 
       </main>
 

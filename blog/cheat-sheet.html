@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>JavaScript Prototypes</title>
+  
+  <link rel="stylesheet" href="./../stylesheets/cutegrids.css">
+  
+  <link rel="stylesheet" href="./../stylesheets/default.css">
+    
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+
+  <div class="row">
+
+    <div class="cute-8-laptop cute-2-laptop-offset left">
+
+      <header class="row">
+        <h2 class="cute-6-laptop">
+          <a href="./blog-index.html">tid<span>byts</span></a>
+        </h2>
+        <h2 class="cute-6-laptop author">
+          crafted by <a href="./../index.html"><span>James Artz</span></a>
+        </h2>
+      </header>
+
+      <section class="post_title">
+        <h2>Apples : Trees as JSObjects : Prototypes</h2>
+        <br>
+        <h3>A snarky explanatory example of JavaScript prototypes</h3>
+      </section>
+
+      <div class="date">
+        11.21.2015
+      </div>
+
+      <br>
+
+      <main role="main">
+
+      <p class="sub-headings">
+        What is a JavaScript Prototype?
+      </p>
+
+      <p>
+        Prototype is a property of an object in Javascript (JS), and they are important when considering the concept of inheritance. All objects have a prototype property, which is empty by default. Inheritance is the process of making properties and methods available to instances of a function. It is accomplished by attaching properties and methods on to the prototype property. Here is an example of how inheritance works, using the prototype property.*
+      </p>
+
+      <br>
+
+      <pre>
+        <code>
+  function SnarkyMessage (message) {
+      this.message = message;
+  }
+
+  SnarkyMessage.prototype.snark = function () {
+      console.log(this.message + " sucks");
+  };
+
+  var iLoveJavaScript = new SnarkyMessage ("JavaScript");
+
+  iLoveJavaScript.snark ();</code>
+      </pre>
+
+      <br>
+
+      <p>
+        The function SnarkyMessage takes a property, message, which it defines as an instance of a variable called message. Just to be clear, this.message is an <em>instance</em> of the variable message. The function SnarkyMessage is then ascribed the snark method, using the prototype property. Note that if the prototype property is removed, running the program raises the following error message: <span class="inline_code">TypeError: prototypeExplained.snark is not a function.</span> This indicates that using the prototype property is necessary in order to call .snark on this.message. Why? because this.message is an instance of SnarkyMessage (message). A new object can now access the results of the SnarkyMessage.prototype.snark function, in the following manner: declare a new object to be a new instance of SnarkyMessage (including the variable, which will be the parameter operated upon). Call .snark on the new object.
+      </p>
+
+      <br>
+
+      <p>
+        In short, the prototype attribute is telling us where iLoveJavaScript got its “snark” from: it’s parent, the SnarkyMessage function. This demonstrates an odd similarity between humans and JS objects: we all eventually turn into our parents. At least JS objects are up front about it, and the characteristic doesn’t suddenly dawn on them when they’re in their 30s.
+      </p>
+
+      <br>
+
+      <p>
+        This example uses object literal notation to show how inheritance works via prototype, but prototype can also be used with a constructor function to create an object. What else is there to know about prototypes? How about the prototype chain - this tells us where an object’s inherited properties were originally defined. If the property is not defined in the object, JS will look at its parent object. If it can’t find the property there, it looks at its “grandparent” object, going all the way back up the prototype chain. If JS cannot find where the property is defined anywhere in the chain, can you guess what gets returned? Yep, undefined.
+      </p>
+
+      <br>
+
+      <p>
+        In sum, the big takeaway regarding prototype is understanding how inheritance works on JS objects. By using prototype, you can define methods, via “parent methods,” on instances of an object, as shown in the snarky example above.
+      </p>
+
+      </main>
+
+      <br>
+      <br>
+
+      <p class="link">
+        *kudos to <a href="javascriptissexy.com">javascriptissexy.com</a> for providing the urCode for this example.
+      </p>
+
+      <br>
+      <br>
+
+      <footer class="link">
+       <ul>
+        <li><a href="http://facebook.com/jelliotartz"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="http://twitter.com/jelliotartz"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="http://linkedin.com/in/jelliotartz"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="http://github.com/jelliotartz"><i class="fa fa-github"></i></a></li>
+       </ul>
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

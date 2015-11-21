@@ -154,7 +154,10 @@ p {
 	width: 33%;
 }
 
-code {
+.inline_code {
+	font-family: monospace;
+	font-size: 1.25em;
+	font-weight: 300;
 	background-color: #C9D4DA;
 	border-radius: 5px;
 }
@@ -165,6 +168,12 @@ code {
 
 p span {
 	font-weight: 700;	
+}
+
+pre {
+	background-image: url(./../imgs/bgc_ideas/crumply_paper.jpg);
+	width: 100%;
+	border-radius: 5px;
 }
 
 

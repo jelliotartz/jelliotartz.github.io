@@ -42,67 +42,66 @@
         10.16.2015
       </div>
 
-      <br>
+        <br>
 
-      <main role="main">
+        <main role="main">
 
-      <p>
-        First, some basic definitions: classes and IDs are two types of selectors that are used to designate HTML elements to which properties and values are applied. The main difference between a class and an ID is that a class targets multiple elements, and an ID targets one element.
-      </p>
-      
-      <br>
-      
-      <p>
-        Second, the methodology for applying class and ID selectors to HTML: I'll start with going through the class methodology, and then come back to ID. After the name of the element in an HTML tag, add class="text", with the name of the class substituted for "text". Here's an example of the HTML syntax.
-      </p>
-
-      <br>
-
-      <code>
-        HTML: < p class="text" > Lorem Ipsum etc.. < /p >
-      </code>
-
-      <br>
-      <br>
-
-      <p>
-        The Lorem Ipsum text will have the property/value attributes defined by the "text" class.
-      </p>
-
-      <br>
-
-      <p>
-        In your CSS stylesheet, classes are defined with a period, followed by the class name, then the property and value of the class in squiggly brackets, followed by a semicolon.
-      </p>
-
-      <br>
+        <p>
+          First, some basic definitions: classes and IDs are two types of selectors that are used to designate HTML elements to which properties and values are applied. The main difference between a class and an ID is that a class targets multiple elements, and an ID targets one element.
+        </p>
         
-        <code>CSS: .text {</code>
-         <br>
-        <code>property:value;</code>
-         <br>
-        <code>}</code>
+        <br>
+        
+        <p>
+          Second, the methodology for applying class and ID selectors to HTML: I'll start with going through the class methodology, and then come back to ID. After the name of the element in an HTML tag, add class="text", with the name of the class substituted for "text". Here's an example of the HTML syntax.
+        </p>
 
+        <br>
+
+      <pre><code>
+  &ltp class="text"> Lorem Ipsum etc..  &lt/p>
+      </code></pre>
+      
+
+        <br>
+
+        <p>
+          The Lorem Ipsum text will have the property/value attributes defined by the "text" class.
+        </p>
+
+        <br>
+
+        <p>
+          In your CSS stylesheet, classes are defined with a period, followed by the class name, then the property and value of the class in squiggly brackets, followed by a semicolon.
+        </p>
+
+        <br>
+        <pre>
+        <code>      
+  .text {
+    property:value; 
+  }</code>
+        </pre>
         <br>
         <br>
 
-      <p>
-        The method for defining and applying IDs is essentially the same as class, with ID replacing class in the HTML tag, and a hash (#) replacing the period in the CSS. An example is given below.
-      </p>
+        <p>
+          The method for defining and applying IDs is essentially the same as class, with ID replacing class in the HTML tag, and a hash (#) replacing the period in the CSS. An example is given below.
+        </p>
 
-      <br>
-
-      <code>
-        HTML: [p id="text"]Lorem Ipsum etc.[/p]
-      </code>
-
-      <br>
-
-        <code>CSS: #text {</code>
         <br>
-        <code>property:value;</code>
+
+      <pre><code>
+  &ltp id="text"> Lorem Ipsum etc..  &lt/p>
+      </code></pre>
+
         <br>
-        <code>}</code>
+        <pre>
+        <code>      
+  #text {
+    property:value; 
+  }</code>
+        </pre>
         <br>
         <br>
 
