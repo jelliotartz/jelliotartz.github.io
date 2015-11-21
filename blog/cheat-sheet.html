@@ -60,17 +60,19 @@
 
       <pre>
         <code>
-  function SnarkyMessage (message) {
-      this.message = message;
+  function SnarkyMessage (LovelyMessage) {
+      this.LovelyMessage = LovelyMessage;
   }
 
   SnarkyMessage.prototype.snark = function () {
-      console.log(this.message + " sucks");
+      console.log(this.LovelyMessage + " sucks");
   };
 
-  var iLoveJavaScript = new SnarkyMessage ("JavaScript");
+  var javaScriptRules = new SnarkyMessage ("I love JavaScript");
 
-  iLoveJavaScript.snark ();</code>
+  javaScriptRules.snark (); 
+
+  // output: "I love JavaScript sucks"</code>
       </pre>
 
       <br>
@@ -82,7 +84,7 @@
       <br>
 
       <p>
-        In short, the prototype attribute is telling us where iLoveJavaScript got its “snark” from: it’s parent, the SnarkyMessage function. This demonstrates an odd similarity between humans and JS objects: we all eventually turn into our parents. At least JS objects are up front about it, and the characteristic doesn’t suddenly dawn on them when they’re in their 30s.
+        In short, the prototype attribute is telling us where javaScriptRules got its “snark” from: it’s parent, the SnarkyMessage function. This demonstrates an odd similarity between humans and JS objects: we all eventually turn into our parents. At least JS objects are up front about it, and the characteristic doesn’t suddenly dawn on them when they’re in their 30s.
       </p>
 
       <br>
