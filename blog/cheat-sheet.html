@@ -72,26 +72,29 @@
   javascriptRules.lovelyMessage</code>
       </pre>
 
+
+      <br>
+      <p>
+        Let's break this down into parts and talk about what's going on in detail. First, I'm creating a constructor function called SnarkyMessage, which takes a string and assigns it to a property, lovelyMessage.
+      </p>
+      <br>
       <pre>
-        <code>
+      <code>
   function SnarkyMessage(lovelyMessage) {
       this.lovelyMessage = lovelyMessage;
   }</code>
   </pre>
       <br>
       <p>
-        Let's break this down into parts and talk about what's going on in detail. First, I'm creating a constructor function called SnarkyMessage, which takes a string and assigns it to a property, lovelyMessage.
+        Then I define a variable, javaScriptRules, using the constructor from above. Calling the constructor property of javaScriptRules in Chrome DevTools can help illustrate this.
       </p>
       <br>
-
       <pre>
       <code>
   var javaScriptRules = new SnarkyMessage("I love JavaScript");</code>
       </pre>
       <br>
-      <p>
-        Then I define a variable, javaScriptRules, using the constructor from above. Calling the constructor property of javaScriptRules in Chrome DevTools can help illustrate this.
-      </p>
+
       <br>
       <div class="image-wrapper">
         <img src="../imgs/javaScriptRules.constructor.png">
@@ -118,7 +121,7 @@
       </pre>
       <br>
       <p>
-        When we call snark on javaScriptRules, we will "snarkify" javaScriptRules as a result of using the prototype property on its constructor, SnarkyMessage. Note that if we tried to define snark on SnarkyMessage, and not on the SnarkyMessage prototype, running the program raises the following error message: <span class="inline_code">TypeError: javaScriptRules.snark is not a function.</span> This indicates that using the prototype property is necessary for javaScriptRules to inherit the snark function.
+        When we call snark on javaScriptRules, we will "snarkify" javaScriptRules as a result of using the prototype property on its constructor, SnarkyMessage. Thus javaScriptRules.lovelyMessage has now inherited the properties of snark, and it throws a snarky addition on the end of lovelyMessage.
       </p>
       <br>
       <pre>
@@ -128,7 +131,7 @@
       </pre>
       <br>
       <p>
-        In sum, the big takeaway from this exercise is that in JavaScript, prototype is used to apply inherited properties to an object. JavaScript objects are still pretty new to me, and this post made me think long and hard about objects and inheritance. I'm excited to keep learning more!
+        Note that if we tried to define snark on SnarkyMessage, and not on the SnarkyMessage prototype, running the program raises the following error message: <span class="inline_code">TypeError: javaScriptRules.snark is not a function.</span> This indicates that using the prototype property is necessary for javaScriptRules to inherit the snark function. In sum, the big takeaway from this exercise is that in JavaScript, prototype is used to apply inherited properties to an object. JavaScript objects are still pretty new to me, and this post made me think long and hard about objects and inheritance. I'm excited to keep learning more!
       </p>
 
       </main>
