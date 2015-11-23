@@ -35,9 +35,7 @@
       </header>
 
       <section class="post_title">
-        <h2>Apples : Trees as JSObjects : Prototypes</h2>
-        <br>
-        <h3>A snarky explanatory example of JavaScript prototypes</h3>
+        <h2>A Snarky Discussion of JavaScript's Prototype Property</h2>
       </section>
 
       <div class="date">
@@ -55,8 +53,24 @@
       <p>
         Prototype is a property of an object in JavaScript, which is important when considering the concept of inheritance. Inheritance, in JavaScript, results in properties or functions from an ancestor (or prototype) being passed on to objects created from its blueprint. We can manipulate the behaviors of an object by defining properties on the prototype of the object's constructor. Here is an example of how inheritance works, using the prototype property.
       </p>
-
       <br>
+      <pre>
+        <code>
+  function SnarkyMessage(lovelyMessage) {
+      this.lovelyMessage = lovelyMessage;
+  }
+
+  var javaScriptRules = new SnarkyMessage("I love JavaScript");
+
+  javascriptRules.lovelyMessage
+
+  SnarkyMessage.prototype.snark = function () {
+      this.lovelyMessage += " sucks");
+  };
+
+  javascriptRules.snark();
+  javascriptRules.lovelyMessage</code>
+      </pre>
 
       <pre>
         <code>
@@ -66,7 +80,7 @@
   </pre>
       <br>
       <p>
-        Here I'm creating a constructor function called SnarkyMessage, which takes a string and assigns it to a property, lovelyMessage.
+        Let's break this down into parts and talk about what's going on in detail. First, I'm creating a constructor function called SnarkyMessage, which takes a string and assigns it to a property, lovelyMessage.
       </p>
       <br>
 
@@ -76,7 +90,7 @@
       </pre>
       <br>
       <p>
-        Here I define a variable, javaScriptRules, using the constructor from above. Calling the constructor property of javaScriptRules in Chrome DevTools can help illustrate this.
+        Then I define a variable, javaScriptRules, using the constructor from above. Calling the constructor property of javaScriptRules in Chrome DevTools can help illustrate this.
       </p>
       <br>
       <div class="image-wrapper">
@@ -110,12 +124,11 @@
       <pre>
         <code>
   javascriptRules.snark();
-  javascriptRules.lovelyMessage  // will output "I love JavaScript sucks"
-        </code>
+  javascriptRules.lovelyMessage  // will output "I love JavaScript sucks"</code>
       </pre>
       <br>
       <p>
-        JavaScript objects are still pretty new to me, and I'm excited to keep learning more!
+        In sum, the big takeaway from this exercise is that in JavaScript, prototype is used to apply inherited properties to an object. JavaScript objects are still pretty new to me, and this post made me think long and hard about objects and inheritance. I'm excited to keep learning more!
       </p>
 
       </main>
