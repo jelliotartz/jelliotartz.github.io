@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Web Architecture Basics</title>
+  
+  <link rel="stylesheet" href="./../stylesheets/cutegrids.css">
+  
+  <link rel="stylesheet" href="./../stylesheets/default.css">
+    
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700italic,700,500italic,500' rel='stylesheet' type='text/css'>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+
+  <div class="row">
+
+    <div class="cute-8-laptop cute-2-laptop-offset left">
+
+      <header class="row">
+        <h2 class="cute-6-laptop">
+          <a href="./blog-index.html">tid<span>byts</span></a>
+        </h2>
+        <h2 class="cute-6-laptop author">
+          crafted by <a href="./../index.html"><span>James Artz</span></a>
+        </h2>
+      </header>
+
+      <section class="post_title">
+        <h2>How Does the Internet Work?</h2>
+        <br>
+        <h3>An Introduction to the Basics of Web Architecture</h3>
+      </section>
+
+      <div class="date">
+        11.22.2015
+      </div>
+
+      <br>
+
+      <main role="main">
+
+      <p class="sub-headings">
+        What is a Web Resource? How Does it Relate to a URL?
+      </p>
+      <br>
+
+      <p>
+        In technical terminology, every web address is a resource. This technical definition of resource can be inferred from the use of the term resource in the acronym URI, which stands for Uniform Resource Identifier. A URI identifies the existence of a resource (i.e., an address) on the web. A URL (Uniform Resource Locator) is part of a subset of URIs, which also provide a way to locate the resource - i.e., it provides location information.
+      </p>
+      <br>
+
+      <p class="sub-headings">
+        What is HTTP? (HyperText Transfer Protocol)
+      </p>
+      <br>
+
+      <p>
+        Stated most simply, HTTP is a type of request. More specifically, it specifies how a client machine requests information or actions from servers, or, basically, how two machines share information. The flow of an HTTP request can be visualized as follows:
+      </p>
+      <br>
+      <p>
+          User issues a command
+          <br>
+          Client generates a request
+          <br>
+          Sends it to a Server and waits
+          <br>
+          Server generates a request
+          <br>
+          Server sends it to the client via the open connection
+          <br>
+          Server hangs up
+          <br>
+          Client renders to the user
+      </p>
+      <br>
+      <p class="sub-headings">
+        What is a Cookie?
+      </p>
+      <br>
+      <p>
+        HTTP is a stateless protocol: each communication between client and server is discreet and unrelated. But information about states, such as login information, or your amazon cart, can nevertheless be “remembered”, even if you shut down your browser. How does this happen? Through the use of cookies!
+      </p>
+      <br>
+      <p>
+        The term cookie is used for both the area where web browsers and server applications put information, and the information itself. More specifically, cookies are an area in the sub-directories of a web browser where state information can be stored and accessed. Cookies work in the following way: a server sends some data to the visitor's browser in the form of a cookie. The browser may accept the cookie. If it does, it is stored as a plain text record on the visitor's hard drive. Now, when the visitor arrives at another page on the site, the browser sends the same cookie to the server for retrieval. Once retrieved, the server knows/remembers what was stored earlier. Cookies are a plain text data record of 5 variable-length fields: 
+      </p>
+      <br>
+      <p>
+        Expires: a date, indicating when the cookie will expire. If this field is blank, it expires when you close the browser.
+        <br>
+        Domain: the domain name of the site.
+        <br>
+        Path: the path to the directory or web page that set the cookie. This may be blank if you want to retrieve the cookie from any directory or page.
+        <br>
+        Secure: if this field contains the word “secure”, then the cookie may only be retrieved with a secure server.
+        <br>
+        Name=Value: cookies are set and retrieved in the form of key/value pairs.
+      </p>
+
+      <br>
+      <p>
+        Cookies were originally designed for CGI programming. The data contained in a cookie is automatically transmitted between the web browser and the web server, so CGI scripts on the server can read and write cookie values that are stored on the client. JavaScript can also manipulate cookies using the cookie property of the Document object. JavaScript can read, create, modify, and delete the cookies that apply to the current web page.
+      </p>
+      <br>
+      <p>
+        There’s obviously much more to learn about the architecture of the web, but I’m going to wrap this post up at this point. 
+      </p>
+
+      </main>
+
+      <br>
+      <br>
+
+      <footer class="link">
+       <ul>
+        <li><a href="http://facebook.com/jelliotartz"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="http://twitter.com/jelliotartz"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="http://linkedin.com/in/jelliotartz"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="http://github.com/jelliotartz"><i class="fa fa-github"></i></a></li>
+       </ul>
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
