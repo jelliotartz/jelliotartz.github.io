@@ -41,7 +41,7 @@
       </section>
 
       <div class="date">
-        11.21.2015
+        11.22.2015
       </div>
 
       <br>
@@ -53,60 +53,72 @@
       </p>
 
       <p>
-        Prototype is a property of an object in Javascript (JS), and they are important when considering the concept of inheritance. All objects have a prototype property, which is empty by default. Inheritance is the process of making properties and methods available to instances of a function. It is accomplished by attaching properties and methods on to the prototype property. Here is an example of how inheritance works, using the prototype property.*
+        Prototype is a property of an object in JavaScript, which is important when considering the concept of inheritance. Inheritance, in JavaScript, results in properties or functions from an ancestor (or prototype) being passed on to objects created from its blueprint. We can manipulate the behaviors of an object by defining properties on the prototype of the object's constructor. Here is an example of how inheritance works, using the prototype property.
       </p>
 
       <br>
 
       <pre>
         <code>
-  function SnarkyMessage (LovelyMessage) {
-      this.LovelyMessage = LovelyMessage;
-  }
+  function SnarkyMessage(lovelyMessage) {
+      this.lovelyMessage = lovelyMessage;
+  }</code>
+  </pre>
+      <br>
+      <p>
+        Here I'm creating a constructor function called SnarkyMessage, which takes a string and assigns it to a property, lovelyMessage.
+      </p>
+      <br>
 
-  SnarkyMessage.prototype.snark = function () {
-      console.log(this.LovelyMessage + " sucks");
-  };
-
-  var javaScriptRules = new SnarkyMessage ("I love JavaScript");
-
-  javaScriptRules.snark (); 
-
-  // output: "I love JavaScript sucks"</code>
+      <pre>
+      <code>
+  var javaScriptRules = new SnarkyMessage("I love JavaScript");</code>
       </pre>
-
       <br>
-
       <p>
-        The function SnarkyMessage takes a property, LovelyMessage, which it defines as an instance of a variable called LovelyMessage. Just to be clear, this.LovelyMessage is an <em>instance</em> of the variable LovelyMessage. The function SnarkyMessage is then ascribed the snark method, using the prototype property. Note that if the prototype property is removed, running the program raises the following error message: <span class="inline_code">TypeError: javaScriptRules.snark is not a function.</span> This indicates that using the prototype property is necessary in order to call .snark on this.LovelyMessage. Why? because this.LovelyMessage is an instance of SnarkyMessage (LovelyMessage). A new object can now access the results of the SnarkyMessage.prototype.snark function, in the following manner: declare a new object to be a new instance of SnarkyMessage (including the variable, which will be the parameter operated upon). Call .snark on the new object.
+        Here I define a variable, javaScriptRules, using the constructor from above. Calling the constructor property of javaScriptRules in Chrome DevTools can help illustrate this.
       </p>
-
       <br>
-
+      <div class="image-wrapper">
+        <img src="../imgs/javaScriptRules.constructor.png">
+      </div>
+      <br>
       <p>
-        In short, the prototype attribute is telling us where javaScriptRules got its “snark” from: it’s parent, the SnarkyMessage function. This demonstrates an odd similarity between humans and JS objects: we all eventually turn into our parents. At least JS objects are up front about it, and the characteristic doesn’t suddenly dawn on them when they’re in their 30s.
+        As you can see, javaScriptRules.lovely message is set to the string passed to constructor, "I love JavaScript"
       </p>
-
       <br>
-
+      <pre>
+        <code>
+  javascriptRules.lovelyMessage  // this outputs "I love JavaScript"</code>
+      </pre>
+      <br>
       <p>
-        This example uses object literal notation to show how inheritance works via prototype, but prototype can also be used with a constructor function to create an object. What else is there to know about prototypes? How about the prototype chain - this tells us where an object’s inherited properties were originally defined. If the property is not defined in the object, JS will look at its parent object. If it can’t find the property there, it looks at its “grandparent” object, going all the way back up the prototype chain. If JS cannot find where the property is defined anywhere in the chain, can you guess what gets returned? Yep, undefined.
+        Now I'm going to add a function, snark, to the prototype of javaScriptRules by defining it via the constructor's prototype property. The function snark will append the word "sucks" to the lovelyMessage property of SnarkyMessage objects.
       </p>
-
       <br>
-
+      <pre>
+        <code>
+  SnarkyMessage.prototype.snark = function () {
+      this.lovelyMessage += " sucks");
+  };</code>
+      </pre>
+      <br>
       <p>
-        In sum, the big takeaway regarding prototype is understanding how inheritance works on JS objects. By using prototype, you can define methods, via “parent methods,” on instances of an object, as shown in the snarky example above.
+        When we call snark on javaScriptRules, we will "snarkify" javaScriptRules as a result of using the prototype property on its constructor, SnarkyMessage. Note that if we tried to define snark on SnarkyMessage, and not on the SnarkyMessage prototype, running the program raises the following error message: <span class="inline_code">TypeError: javaScriptRules.snark is not a function.</span> This indicates that using the prototype property is necessary for javaScriptRules to inherit the snark function.
+      </p>
+      <br>
+      <pre>
+        <code>
+  javascriptRules.snark();
+  javascriptRules.lovelyMessage  // will output "I love JavaScript sucks"
+        </code>
+      </pre>
+      <br>
+      <p>
+        JavaScript objects are still pretty new to me, and I'm excited to keep learning more!
       </p>
 
       </main>
-
-      <br>
-      <br>
-
-      <p class="link">
-        *kudos to <a href="javascriptissexy.com">javascriptissexy.com</a> for providing the urCode for this example.
-      </p>
 
       <br>
       <br>
